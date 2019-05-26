@@ -46,6 +46,6 @@ public class LoginController {
         request.setAttribute("groupName",request.getParameter("groupname"));
         request.setAttribute("username",username);
         log.info("用户 " + username + " 创建聊天室");
-        return "/group_room";
+        return "group_room";
     }
 }

@@ -89,7 +89,7 @@
     客户端通过一个回调函数来接收服务端的消息
     客户端通过send函数将消息发送给客户端
     */
-    var websocket = new WebSocket("ws://localhost:8080/chat");
+    var websocket = new WebSocket("ws://www.brandonxcc.top:8080/chat");
     websocket.onopen = function(event){
         console.log("创建连接");
     };
@@ -159,11 +159,11 @@
         console.log( $('#username').text())
         var list = new Array(item,$('#username').text());
         websocket.send(JSON.stringify({type: 'Single', username: $('#username').text(), 
-                              msg: $('#username').text() + '邀请你私聊<a href="http://2215597d.ngrok.io/private">进入</a>',
+                              msg: $('#username').text() + '邀请你私聊<a href="http://www.brandonxcc.top:8080/private">进入</a>',
                               onlineNum: $('.chat-num').text(),list: list}));
     }
     function createRoom(){
-        websocket.send(JSON.stringify({type: 'Speak',username: $('#username').text(), msg: '创建群聊，<a href="http://2215597d.ngrok.io/group?groupname=' + $('#username').text()  + '">点击进入</a>',
+        websocket.send(JSON.stringify({type: 'Speak',username: $('#username').text(), msg: '创建群聊，<a href="http://www.brandonxcc.top:8080/group?groupname=' + $('#username').text()  + '">点击进入</a>',
                             onlineNum: $('.chat-num').text()}));
     }
     $('#img').change('input',function(e){

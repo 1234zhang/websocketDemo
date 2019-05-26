@@ -20,7 +20,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Slf4j
 @Component
-@ServerEndpoint(value = "/group_chat/{groupname}",configurator = HttpSessionConfigurator.class)
+@ServerEndpoint(value = "/group_room/{groupname}",configurator = HttpSessionConfigurator.class)
 public class GroupChatServer {
     private static Map<String, Session> chatMember = new ConcurrentHashMap<>();
 

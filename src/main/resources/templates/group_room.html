@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th= "http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>WebSocket简单聊天室</title>
@@ -86,7 +86,7 @@
 </div>
 <script th:inline="javascript">
     var groupname = $('#groupName').text();
-    var websocket = new WebSocket('ws://localhost:8080/group_chat/' + groupname);
+    var websocket = new WebSocket('ws://www.brandonxcc.top:8080/group_room/' + groupname);
     websocket.onopen = function(event){
         console.log("创建连接....");
     };
